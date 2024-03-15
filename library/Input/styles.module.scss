@@ -1,0 +1,48 @@
+@import "@/styles/config/mixins";
+@import "@/styles/config/typography";
+
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+    gap: 4px;
+    position: relative;
+
+    &__label {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        color: var(--foreground);
+    }
+
+    &__input {
+        all: unset;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 8px;
+        border: 1px solid var(--foreground);
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+
+        &:active,
+        &:focus {
+            border: 1px solid var(--foreground);
+        }
+
+        &::placeholder {
+            color: var(--neutral-500-placeholder, #a0aec0);
+        }
+
+        &-container {
+            width: 100%;
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// transition: all var(--transition-time) ease-in-out;
+	scroll-behavior: smooth;
+}
+
+:root,
+:root::before,
+:root::after {
+	--transition-time: 0.3s;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	font-size: 16px;
+
+	@include responsive(phone) {
+		font-size: 12px;
+	}
+
+	@include responsive(tablet) {
+		font-size: 14px;
+	}
+
+	@include responsive(desktop) {
+		font-size: 16px;
+	}
+
+	@include responsive(large-desktop) {
+		font-size: 18px;
+	}
+
+	@include responsive(extra-large-desktop) {
+		font-size: 20px;
+	}
+}
+
+body {
+	font-family: var(--font-poppins);
+	overflow-x: hidden;
+	background-color: var(--background);
+	color: var(--foreground);
+}
+
+.dispn {
+	display: none !important;
+}

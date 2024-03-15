@@ -1,0 +1,83 @@
+// $name: name of the font family var(--font-poppins), var(--font-montserrat)
+// $size: size of the font (xxs, xs, sm, md, lg, xl, xxl, xxxl, head-1, head-2, head-3)
+// $weight: weight of the font (light, regular, medium, bold)
+
+$font-families: ("poppins", "montserrat");
+
+$font-sizes: (
+	"xxs",
+	"xs",
+	"sm",
+	"s",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"xxxl",
+	"head-1",
+	"head-2",
+	"head-3"
+);
+
+$font-weights: ("light", "regular", "medium", "bold", "extra-bold");
+
+@mixin typography($size: "md", $weight: "regular", $name: "poppins") {
+	// font families
+
+	@if $name == "poppins" {
+		font-family: "Poppins", sans-serif;
+	} @else if $name == "montserrat" {
+		font-family: "Montserrat", sans-serif;
+	} @else {
+		font-family: "Poppins", sans-serif;
+	}
+
+	line-height: 120%;
+	vertical-align: middle;
+
+	// font sizes
+
+	@if $size == "xxs" {
+		font-size: 0.5rem;
+	} @else if $size == "xs" {
+		font-size: 0.625rem;
+	} @else if $size == "sm" {
+		font-size: 0.75rem;
+	} @else if $size == "s" {
+		font-size: 0.875rem;
+	} @else if $size == "md" {
+		font-size: 1rem;
+	} @else if $size == "lg" {
+		font-size: 1.125rem;
+	} @else if $size == "xl" {
+		font-size: 1.25rem;
+	} @else if $size == "xxl" {
+		font-size: 1.5rem;
+	} @else if $size == "xxxl" {
+		font-size: 1.75rem;
+	} @else if $size == "head-1" {
+		font-size: 4rem;
+	} @else if $size == "head-2" {
+		font-size: 2.5rem;
+	} @else if $size == "head-3" {
+		font-size: 2rem;
+	} @else {
+		font-size: 1rem;
+	}
+
+	// font weights
+
+	@if $weight == "light" {
+		font-weight: 300;
+	} @else if $weight == "regular" {
+		font-weight: 400;
+	} @else if $weight == "medium" {
+		font-weight: 500;
+	} @else if $weight == "bold" {
+		font-weight: 600;
+	} @else if $weight == "extra-bold" {
+		font-weight: 700;
+	} @else {
+		font-weight: 400;
+	}
+}

@@ -1,0 +1,33 @@
+.payment-method {
+	&-upi,
+	&-card {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		gap: 16px;
+
+		button {
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+
+	&-form {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+
+		&-group {
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 12px;
+		}
+	}
+}
